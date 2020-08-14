@@ -1,0 +1,12 @@
+com\pages\PageClass.class
+com\qa\ElementUtils\AppConstants.class
+com\qa\ElementUtils\ElementUtils.class
+com\qa\hubSpot\Listeners\pdfListener.class
+com\qa\ElementUtils\ChromeOptions.class
+com\qa\hubSpot\basePage\BasePage.class
+com\qa\hubSpot\Listeners\AllureReports.class
+com\qa\ElementUtils\CredentialsManager.class
+com\qa\ElementUtils\ExcelUtils.class
+com\qa\hubSpot\Listeners\ExtentReportListener.class
+com\pages\ContactsPage.class
+com\qa\ElementUtils\JavaScriptUtils.class
