@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,8 +37,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-TEST_RUNNERS">
-              <span class="suite-name border-failed">TEST RUNNERS</span>
+            <a href="#" class="navigator-link" panel-name="suite-Parallel">
+              <span class="suite-name border-failed">Parallel</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-TEST_RUNNERS">
-                    <span>C:\Users\Poorna\eclipse-workspace\Framework\src\test\Resources\TestRunners\Functional.xml</span>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Parallel">
+                    <span>C:\Users\Poorna\eclipse-workspace\Framework\src\test\Resources\TestRunners\Parallel.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-TEST_RUNNERS">
-                    <span class="test-stats">1 test</span>
+                  <a href="#" class="navigator-link " panel-name="testlist-Parallel">
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-TEST_RUNNERS">
+                  <a href="#" class="navigator-link " panel-name="group-Parallel">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-TEST_RUNNERS">
+                  <a href="#" class="navigator-link " panel-name="times-Parallel">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-TEST_RUNNERS">
+                  <a href="#" class="navigator-link " panel-name="reporter-Parallel">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-TEST_RUNNERS">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Parallel">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-TEST_RUNNERS">
+                  <a href="#" class="navigator-link " panel-name="chronological-Parallel">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,21 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
                     <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-TEST_RUNNERS" class="hide-methods failed suite-TEST_RUNNERS"> (hide)</a> <!-- hide-methods failed suite-TEST_RUNNERS -->
-                      <a href="#" panel-name="suite-TEST_RUNNERS" class="show-methods failed suite-TEST_RUNNERS"> (show)</a> <!-- show-methods failed suite-TEST_RUNNERS -->
+                      <a href="#" panel-name="suite-Parallel" class="hide-methods failed suite-Parallel"> (hide)</a> <!-- hide-methods failed suite-Parallel -->
+                      <a href="#" panel-name="suite-Parallel" class="show-methods failed suite-Parallel"> (show)</a> <!-- show-methods failed suite-Parallel -->
                     </span>
-                    <div class="method-list-content failed suite-TEST_RUNNERS">
+                    <div class="method-list-content failed suite-Parallel">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TEST_RUNNERS" title="com.qa.TestClass.TestClass" hash-for-method="LoginCheck">LoginCheck</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Parallel" title="com.qa.TestClass.TestClass" hash-for-method="LoginCheck">LoginCheck</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-TEST_RUNNERS -->
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Parallel" title="com.qa.TestClass.TestClass" hash-for-method="LoginCheck">LoginCheck</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Parallel -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,8 +121,8 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-TEST_RUNNERS" class="panel TEST_RUNNERS">
-          <div class="suite-TEST_RUNNERS-class-failed">
+        <div panel-name="suite-Parallel" class="panel Parallel">
+          <div class="suite-Parallel-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
               <span class="class-name">com.qa.TestClass.TestClass</span>
@@ -128,96 +133,125 @@
                   <a name="LoginCheck">
                   </a> <!-- LoginCheck -->
                   <span class="method-name">LoginCheck</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [ContactsNew] but found [Loading...]
+	at com.qa.TestClass.TestClass.LoginCheck(TestClass.java:72)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginCheck">
+                  </a> <!-- LoginCheck -->
+                  <span class="method-name">LoginCheck</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [ContactsNew] but found [Contacts]
-	at com.qa.TestClass.TestClass.LoginCheck(TestClass.java:55)
-... Removed 31 stack frames
+	at com.qa.TestClass.TestClass.LoginCheck(TestClass.java:72)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-TEST_RUNNERS-class-failed -->
-        </div> <!-- panel TEST_RUNNERS -->
-        <div panel-name="test-xml-TEST_RUNNERS" class="panel">
+          </div> <!-- suite-Parallel-class-failed -->
+        </div> <!-- panel Parallel -->
+        <div panel-name="test-xml-Parallel" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Poorna\eclipse-workspace\Framework\src\test\Resources\TestRunners\Functional.xml</span>
+            <span class="header-content">C:\Users\Poorna\eclipse-workspace\Framework\src\test\Resources\TestRunners\Parallel.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;TEST RUNNERS&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Parallel&quot; parallel=&quot;tests&quot;&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;com.qa.hubSpot.Listeners.pdfListener&quot;/&gt;
-    &lt;listener class-name=&quot;com.qa.hubSpot.Listeners.AllureReports&quot;/&gt;
-    &lt;listener class-name=&quot;com.qa.hubSpot.Listeners.TesultsReport&quot;/&gt;
+    &lt;listener class-name=&quot;com.qa.hubSpot.Listeners.ExtentReportListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Functional Regression Test&quot;&gt;
+  &lt;test thread-count=&quot;3&quot; name=&quot;Parallel Run -IE&quot; parallel=&quot;classes&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;IE&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.TestClass.TestClass&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Functional Regression Test --&gt;
-&lt;/suite&gt; &lt;!-- TEST RUNNERS --&gt;
+  &lt;/test&gt; &lt;!-- Parallel Run -IE --&gt;
+  &lt;test thread-count=&quot;3&quot; name=&quot;Parallel Run-Chrome&quot; parallel=&quot;classes&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.qa.TestClass.TestClass&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Parallel Run-Chrome --&gt;
+&lt;/suite&gt; &lt;!-- Parallel --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-TEST_RUNNERS" class="panel">
+        <div panel-name="testlist-Parallel" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for TEST RUNNERS</span>
+            <span class="header-content">Tests for Parallel</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Functional Regression Test (1 class)</span>
+                <span class="test-name">Parallel Run -IE (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Parallel Run-Chrome (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-TEST_RUNNERS" class="panel">
+        <div panel-name="group-Parallel" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for TEST RUNNERS</span>
+            <span class="header-content">Groups for Parallel</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-TEST_RUNNERS" class="panel">
+        <div panel-name="times-Parallel" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for TEST RUNNERS</span>
+            <span class="header-content">Times for Parallel</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_TEST_RUNNERS');
-function tableData_TEST_RUNNERS() {
+suiteTableInitFunctions.push('tableData_Parallel');
+function tableData_Parallel() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'LoginCheck')
 data.setCell(0, 2, 'com.qa.TestClass.TestClass')
-data.setCell(0, 3, 248484);
-window.suiteTableData['TEST_RUNNERS']= { tableData: data, tableDiv: 'times-div-TEST_RUNNERS'}
+data.setCell(0, 3, 263715);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'LoginCheck')
+data.setCell(1, 2, 'com.qa.TestClass.TestClass')
+data.setCell(1, 3, 50980);
+window.suiteTableData['Parallel']= { tableData: data, tableDiv: 'times-div-Parallel'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
-              <div id="times-div-TEST_RUNNERS">
-              </div> <!-- times-div-TEST_RUNNERS -->
+              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <div id="times-div-Parallel">
+              </div> <!-- times-div-Parallel -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-TEST_RUNNERS" class="panel">
+        <div panel-name="reporter-Parallel" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for TEST RUNNERS</span>
+            <span class="header-content">Reporter output for Parallel</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-TEST_RUNNERS" class="panel">
+        <div panel-name="ignored-methods-Parallel" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -225,11 +259,13 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">invalidDataLogin</span>
                 <br/>
+                <span class="ignored-method-name">invalidDataLogin</span>
+                <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-TEST_RUNNERS" class="panel">
+        <div panel-name="chronological-Parallel" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
@@ -237,14 +273,24 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.TestClass.TestClass</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp</span>
+                <span class="method-name">setUp(IE)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(Chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">LoginCheck</span>
-                <span class="method-start">12177 ms</span>
+                <span class="method-start">27983 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">LoginCheck</span>
+                <span class="method-start">33466 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
