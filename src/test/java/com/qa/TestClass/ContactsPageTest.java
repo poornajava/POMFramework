@@ -1,13 +1,18 @@
 package com.qa.TestClass;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.beust.jcommander.Parameter;
 import com.pages.ContactsPage;
 import com.pages.PageClass;
 import com.qa.ElementUtils.CredentialsManager;
@@ -23,14 +28,27 @@ public class ContactsPageTest {
 	PageClass p1;
 	ContactsPage c1;
 	CredentialsManager c2;
+	String browsername;
 	
 	
-	@BeforeTest
-	public void setUp() throws InterruptedException
+	@Parameters(value= {"browsername"})
+	@BeforeMethod(alwaysRun = true)
+	public void setUp(String browserName) throws InterruptedException
 	{
 		b1= new BasePage();
 		prop=b1.init_Properties();
-		String browsername=prop.getProperty("browserName");
+		if(browserName.equals(null))
+		{
+			String browsername=prop.getProperty("browserName");
+			System.out.println(browserName);
+		}
+		else
+		{
+			browsername=browsername;
+			System.out.println("here.............");
+			System.out.println(browsername);
+		}
+	//	String browsername=prop.getProperty("browserName");
 		driver=b1.init_Browser(browsername);
 		driver.get(prop.getProperty("url"));
 		driver.manage().deleteAllCookies();
@@ -61,6 +79,7 @@ public class ContactsPageTest {
 	}
 	
 	
+	@AfterMethod
 	@AfterTest
 	public void tearDown()
 	{

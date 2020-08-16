@@ -15,7 +15,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import com.beust.jcommander.Parameter;
 import com.qa.ElementUtils.ChromeOptions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BasePage {
 	private static final int FILE = 0;
@@ -50,7 +53,8 @@ public class BasePage {
 		}
 		else
 		{
-			System.setProperty("webdriver.ie.driver", "C:\\Users\\Poorna\\Desktop\\DRIVER\\IEDriverServer.exe");
+			//System.setProperty("webdriver.ie.driver", "C:\\Users\\Poorna\\Desktop\\DRIVER\\IEDriverServer.exe");
+			WebDriverManager.chromedriver().setup();
 			org.openqa.selenium.chrome.ChromeOptions options=  co.getChromeOptions();
 			tlDriver.set(new ChromeDriver(options));
 			

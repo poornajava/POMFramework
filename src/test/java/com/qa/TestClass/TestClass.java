@@ -4,6 +4,7 @@ import java.util.Properties;
 
 import javax.security.auth.login.CredentialException;
 
+import org.aspectj.weaver.tools.Trace;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -11,6 +12,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.pages.PageClass;
@@ -30,13 +32,29 @@ public class TestClass {
 	Properties prop;
 	CredentialsManager c1;
 	
+	
 	@BeforeMethod
-	public void setUp() throws Exception
+	@Parameters({"browser"})
+	
+	public void setUp(String browser) throws Exception
 	{
+		String browserName=null;
 		
 	b1= new BasePage();
+	
 	 prop=b1.init_Properties();
-	String browserName=prop.getProperty("browserName");
+	
+	 if(browser.equals(null))
+		{
+		  browserName=prop.getProperty("browserName");
+		}
+
+	 else
+	 {
+		 browserName=browser;
+	 }
+		
+	
 	driver=b1.init_Browser(browserName);
 	p1=new PageClass(driver);
 	driver.get(prop.getProperty("url"));
@@ -44,9 +62,7 @@ public class TestClass {
 	c1= new CredentialsManager(prop.getProperty("username"),prop.getProperty("password"));
 	}
 	
-@Test (enabled = true)
-@Severity(SeverityLevel.CRITICAL)
-@Story("Login Page Tittle")
+@Test
 public void LoginCheck() throws InterruptedException
 {
 	p1.login(c1);
