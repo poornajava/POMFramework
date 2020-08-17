@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Parallel]" parallel="tests">
+  <listeners>
+    <listener class-name="com.qa.hubSpot.Listeners.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="2" name="Parallel Run-Chrome(failed)" parallel="classes">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.qa.TestClass.TestClass">
+        <methods>
+          <include name="LoginCheck"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.TestClass.TestClass -->
+    </classes>
+  </test> <!-- Parallel Run-Chrome(failed) -->
+  <test thread-count="2" name="Parallel Run -IE(failed)" parallel="classes">
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="com.qa.TestClass.TestClass">
+        <methods>
+          <include name="LoginCheck"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.TestClass.TestClass -->
+    </classes>
+  </test> <!-- Parallel Run -IE(failed) -->
+</suite> <!-- Failed suite [Parallel] -->
